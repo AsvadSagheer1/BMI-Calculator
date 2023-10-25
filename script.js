@@ -3,19 +3,32 @@ const heightFt = document.querySelector(".feet");
 const heightIn = document.querySelector(".inches");
 const output = document.querySelector(".output");
 const _status = document.querySelector(".status");
-let alertBox = document.querySelector("#alertBox");
+const alertBox = document.querySelector("#alertBox");
+const content = document.querySelectorAll(".content")
 
 function checkBMIStatus(e) {
     let status = ''
     if (e <= 18.4) {
         status = 'Underweight'
+        content.forEach(function (element) {
+            element.setAttribute("src", "./img/underweight.png");
+        });
     } else if (e > 18.5 && e <= 24.9) {
         status = 'Normal'
+        content.forEach(function (element) {
+            element.setAttribute("src", "./img/normal.png");
+        });
     }
     else if (e > 24.9 && e <= 39.9) {
         status = 'Overweight'
+        content.forEach(function (element) {
+            element.setAttribute("src", "./img/overweight.png");
+        });
     } else if (e >= 39.9) {
         status = 'Obese'
+        content.forEach(function (element) {
+            element.setAttribute("src", "./img/obese.png");
+        });
     }
     console.log(status);
     _status.textContent = `You are ${status}`
