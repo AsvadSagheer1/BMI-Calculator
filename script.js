@@ -63,4 +63,7 @@ function clearAll() {
     output.textContent = ""
     _status.textContent = ""
     alertBox.style.display = "none";
+    content.forEach(function (element) {
+        element.setAttribute("src", "");
+    });
 }
