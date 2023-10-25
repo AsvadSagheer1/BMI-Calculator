@@ -37,7 +37,7 @@ function checkBMIStatus(e) {
 
 
 function submit() {
-    if (heightIn.value <= 0 || heightFt.value <= 0 || weight.value <= 0) {
+    if (heightFt.value <= 0 || weight.value <= 0) {
         alertBox.style.display = "block";
         alertBox.textContent = "Please type valid numbers!";
     } else {
