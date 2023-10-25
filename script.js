@@ -13,7 +13,7 @@ function checkBMIStatus(e) {
         content.forEach(function (element) {
             element.setAttribute("src", "./img/underweight.png");
         });
-    } else if (e > 18.5 && e <= 24.9) {
+    } else if (e > 18.4 && e <= 24.9) {
         status = 'Normal'
         content.forEach(function (element) {
             element.setAttribute("src", "./img/normal.png");
